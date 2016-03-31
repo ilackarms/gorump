@@ -4,10 +4,14 @@ import (
 	"fmt"
 	"net/http"
 	"time"
+	
+	"github.com/layer-x/layerx-commons/lxlog"
+	"github.com/Sirupsen/logrus"
 )
 
 // fast test
 func fastHandler(w http.ResponseWriter, r *http.Request) {
+	lxlog.Infof(logrus.Fields{}, "test imported logger")
 	fmt.Fprintf(w, "this request is fast")
 }
 
